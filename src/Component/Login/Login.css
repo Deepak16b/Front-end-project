@@ -1,0 +1,96 @@
+/* Centering the login container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+}
+
+.login-box {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeIn 0.5s forwards;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Added background color transition */
+}
+
+.login-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  background-color: #f1f8e9; /* Light green background on hover */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2 {
+  font-size: 28px; /* Increased font size */
+  margin-bottom: 20px;
+  color: #00796b; /* Darker teal color */
+}
+
+.input-container {
+  margin: 15px 0;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px; /* Slightly more rounded */
+  border: 1px solid #ccc;
+  font-size: 16px; /* Increased font size */
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #00796b; /* Teal border on focus */
+  box-shadow: 0 0 5px rgba(0, 121, 107, 0.5); /* Glow effect */
+}
+
+.login-btn {
+  background-color: #00796b; /* Teal color */
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px; /* More rounded */
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px; /* Larger font size */
+  transition: background-color 0.3s, transform 0.3s; /* Added transform transition */
+}
+
+.login-btn:hover {
+  background-color: #004d40; /* Darker shade on hover */
+  transform: translateY(-3px); /* Lift effect on hover */
+}
+
+.register-redirect {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.register-redirect a {
+  color: #00796b;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.register-redirect a:hover {
+  color: #004d40; /* Darker teal on hover */
+}
+input::placeholder {
+  color: #999; /* Change placeholder color */
+  font-style: italic; /* Make it italic for distinction */
+}

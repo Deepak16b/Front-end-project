@@ -1,0 +1,76 @@
+/* Product.css */
+
+.product-container {
+  padding: 40px 20px; /* Increased padding for a more spacious look */
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  color: #388e3c;
+  margin-bottom: 30px; /* More space below the heading */
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 products per row */
+  gap: 30px; /* Increased gap for more space between cards */
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 12px; /* Slightly more rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow for more depth */
+  padding: 20px; /* More padding for better spacing */
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.3s;
+  position: relative; /* For pseudo-element glow effect */
+}
+
+.product-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 12px; /* Match the card corners */
+  background: rgba(56, 142, 60, 0.1); /* Light green overlay for glow */
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.3s;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(56, 142, 60, 0.3); /* Stronger shadow on hover */
+}
+
+.product-card:hover::after {
+  opacity: 1; /* Show the glow effect on hover */
+}
+
+.product-image {
+  width: 30%; /* Adjusted width for medium size */
+  height: auto;
+  border-radius: 8px; /* Match new card corners */
+  margin-bottom: 15px; /* Space between image and text */
+  max-height: 150px; /* Limit the maximum height */
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+.add-to-cart-btn {
+  background: linear-gradient(to right, #388e3c, #66bb6a);
+  color: white;
+  border: none;
+  padding: 12px 20px; /* Slightly larger button */
+  font-size: 1.1em; /* Slightly larger font */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.add-to-cart-btn:hover {
+  background: linear-gradient(to right, #2e7d32, #5cbf5c);
+  transform: scale(1.05);
+}
